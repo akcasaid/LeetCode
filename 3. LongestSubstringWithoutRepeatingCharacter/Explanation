@@ -1,0 +1,21 @@
+Problemde, bir string içinde yinelenmeyen karakterlerden oluşan en uzun alt stringin (substring) uzunluğunu bulmamız isteniyor.
+Yani her karakterin en fazla bir kez yer aldığı, yinelenmeyen karakterler içeren en uzun alt stringin uzunluğunu tespit etmeliyiz.
+
+Problemi çözmek için Sliding Window yöntemini kullanmayı tercih edilebilr.
+
+Başlangıç Koşullarını Belirleme:
+ 1) İki işaretçi (start ve end) tanımlayarak, string üzerinde bir pencere oluştururuz. Bu pencere, start indeksinden başlayıp end indeksine kadar olan karakterleri kapsar.
+ 2) En uzun alt stringin uzunluğunu saklamak için bir değişken (max_length) tanımlarız.
+
+Pencereyi Genişletme:
+ 1) end işaretçisini artırarak pencereyi sağa doğru genişletiriz.
+ 2) Eğer end işaretçisinin gösterdiği karakter daha önce pencerede yoksa, bu karakteri pencereye dahil ederiz ve gerekirse max_length'i güncelleriz.
+
+Tekrar Eden Karakterleri Kontrol Etme:
+ 1) Eğer end işaretçisinin gösterdiği karakter pencerede zaten varsa, bu bir tekrarlanan karakterdir. Dolayısıyla start işaretçisini, tekrarlanan karakterin bir sonraki konumuna kadar artırarak pencereden çıkarırız.
+
+
+Tüm karakterleri kontrol edene kadar döngüde işlem tekrarlanır. 
+
+
+charIndexMap--> Karakterlerin son görüldüğü pozisyonları saklamak için bir sözlük (dictionary)
