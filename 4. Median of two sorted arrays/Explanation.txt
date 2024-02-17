@@ -1,0 +1,16 @@
+Problem iki sıralı tam sayı dizisinin medyanını bulmayı gerektiriyor.
+ Medyan, bir veri dizisinin ortasındaki değerdir. 
+Eğer veri dizisinin uzunluğu çift sayıda ise, ortadaki iki sayının ortalaması medyan olur. Tek sayıda ise, ortadaki sayı doğrudan medyandır.
+
+
+Adımlar:
+1) İki diziyi birleştirin.
+2) Birleştirilmiş diziyi sıralayın.
+3) Sıralanmış dizinin uzunluğuna göre tek veya çift sayıda eleman olup olmadığını kontrol edin.
+4) Tek sayıda eleman varsa, ortadaki elemanı medyan olarak döndürün.
+5) Çift sayıda eleman varsa, ortadaki iki elemanın ortalamasını alarak medyanı bulun.
+Bu işlemler O((m+n)log(m+n)) zaman karmaşıklığına sahiptir. Problemin istediği O(log(m+n)) zaman karmaşıklığına ulaşmak için daha karmaşık bir algoritma uygulamanız gerekmektedir, bu da genellikle iki sıralı dizide ikili arama yaparak sağlanabilir. Bu, doğrudan iki dizinin indekslerini kullanarak ve birleştirme yapmadan medyanı bulmanıza olanak tanır.
+
+
+
+
